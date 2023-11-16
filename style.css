@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 32px;
+  font-family: monospace;
+  place-items: center;
+  display: grid;
+}
+
+#progress {
+  position: fixed;
+  top: 0;
+  width: 0%;
+  background-color: red;
+  height: 1em;
+
+  animation: progress-grow auto linear;
+  animation-timeline: scroll(root block);
+}
+
+section {
+  padding: 40px 0;
+  max-width: 800px;
+}
+
+section h3 {
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+section p {
+  font-size: 28px;
+  text-wrap: balance;
+  letter-spacing: -1px;
+}
+
+@keyframes progress-grow {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
